@@ -13,6 +13,20 @@ items.forEach((item, index) => {
   };
 });
 
+window.onscroll = function() {myFunction()};
+
+const navbar = document.querySelector(".sidebar");
+const sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
 // Slider
 
 $(".slider").slick({
